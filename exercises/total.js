@@ -5,7 +5,13 @@
  * and return the total
  *
  */
-
+function total(tab){
+    let somme=0;
+    for (let index =0; index<tab.length; index++){
+        somme = somme + tab[index];
+    }
+    return somme;
+}
 
 //* Begin of tests
 const assert = require('assert')
