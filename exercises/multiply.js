@@ -10,8 +10,41 @@
 
 // Your code :
 
-//* Begin of tests
-const assert = require('assert')
+function multiply(a, b) {
+    var total = a ;
+    if(a>0 && b>0)
+    {
+        for (let i= 0;i < b-1; i++)
+        {total = total + a;}
+    }
+    
+    else if
+    (a<0 && b<0)
+    {
+        for (let i= 0;i > b-1; i--)
+        {total = total - a;}
+    }
+    else if
+    (a<0 && b>0)
+    {
+        for (let i= 0;i < b-1; i++)
+        {total = total + a;}
+    }
+    else if
+    (a>0 && b<0)
+    {
+        for (let i= 0;i > b-1; i--)
+        {total = total - a;}
+    }
+    else{total = 0}
+    return total;
+
+}
+
+
+
+    //* Begin of tests
+    const assert = require('assert')
 
 assert.strictEqual(typeof multiply, 'function')
 assert.strictEqual(multiply.length, 2)
