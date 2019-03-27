@@ -1,4 +1,4 @@
-script: ./tester math basics
+script: ./tester math basics get
 language: node_js
 node_js:
   - "node"
