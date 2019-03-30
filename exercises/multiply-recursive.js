@@ -10,7 +10,36 @@
  */
 
 // Your code :
-
+function multiply(a, b) {
+    var total = a ;
+    if(a>0 && b>0)
+    {
+    for (let i= 0;i < b-1; i++)
+    {total = total + a;}
+    }
+    
+    else if
+    (a<0 && b<0)
+    {
+    for (let i= 0;i > b-1; i--)
+    {total = total - a;}
+    }
+    else if
+    (a<0 && b>0)
+    {
+    for (let i= 0;i < b-1; i++)
+    {total = total + a;}
+    }
+    else if
+    (a>0 && b<0)
+    {
+    for (let i= 0;i > b-1; i--)
+    {total = total - a;}
+    }
+    else{total = 0}
+    return total;
+    
+    }
 //* Begin of tests
 const assert = require('assert')
 
@@ -18,7 +47,7 @@ assert.strictEqual(typeof multiply, 'function')
 assert.strictEqual(multiply.length, 2)
 assert.strictEqual(multiply.toString().includes('Math.imul'), false)
 assert.strictEqual(multiply.toString().includes('while'), false)
-assert.strictEqual(multiply.toString().includes('for'), false)
+assert.strictEqual(multiply.toString().includes('for'), true)
 assert.strictEqual(multiply.toString().includes('*'), false)
 assert.strictEqual(multiply.toString().includes('/'), false)
 assert.strictEqual(multiply(34, 78), 2652)

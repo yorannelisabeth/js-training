@@ -8,7 +8,11 @@
  */
 
 // Your code :
+// il existe plusieur façon de créer un objet ne pas hésiter a voir la doc yorann fait avec luc
+var circular = new Object();
 
+
+circular.circular = circular;
 //* Begin of tests
 const assert = require('assert')
 
